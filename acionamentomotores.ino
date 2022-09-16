@@ -10,7 +10,7 @@ const int pwmMotorB = D2;
 const int dirMotorA = D3;
 const int dirMotorB = D4;
 char pwm;
-int motorSpeed = 500;
+int motorSpeed = 750;
 void setup() {
   Serial.begin(115200);
   Serial.println();
@@ -29,78 +29,30 @@ void loop() {
   Serial.println("Activate B");
   digitalWrite(pwmMotorB, motorSpeed);
   digitalWrite(dirMotorB, LOW);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   Serial.println("Reverse A");  //  ANDA PARA TRÁS
   digitalWrite(dirMotorA, HIGH);
   Serial.println("Reverse B");
   digitalWrite(dirMotorB, HIGH);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   Serial.println("Activate A");  //  CURVA PARA A ESQUERDA PARA FRENTE 
   digitalWrite(pwmMotorA, motorSpeed);
   digitalWrite(dirMotorA, LOW);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   Serial.println("Reverse A");  //  CURVA PARA A ESQUERDA PARA TRÁS
   digitalWrite(dirMotorA, HIGH);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   Serial.println("Activate B");  //  CURVA PARA A DIREITA PARA FRENTE
   digitalWrite(pwmMotorB, motorSpeed);
   digitalWrite(dirMotorB, LOW);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   Serial.println("Reverse B");  //  CURVA PARA A DIREITA PARA TRÁS
   digitalWrite(dirMotorB, HIGH);
-  delay(1500);
-
-  Serial.println("Stop A");  //  PARA OS MOTORES
-  digitalWrite(pwmMotorA, 0);
-  digitalWrite(dirMotorA, LOW);
-  Serial.println("Stop B");
-  digitalWrite(pwmMotorB, 0);
-  digitalWrite(dirMotorB, LOW);
   delay(3000);
 
   //-------------------------------------------------------------------
